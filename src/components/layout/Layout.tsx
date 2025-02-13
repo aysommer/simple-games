@@ -1,14 +1,18 @@
 import React, { PropsWithChildren } from 'react'
+import { Flex } from '@chakra-ui/react';
 import Navbar from './Navbar'
+import Body from './Body';
+import Footer from './Footer';
 
 const Layout: React.FC<PropsWithChildren> = ({ children }) => {
    return (
-      <main>
+      <Flex direction="column" minHeight="100vh">
          <Navbar />
-         <main>
+         <Body>
             {children}
-         </main>
-      </main>
+         </Body>
+         <Footer />
+      </Flex>
    )
 }
 
